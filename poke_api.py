@@ -4,7 +4,7 @@ https://pokeapi.co/
 '''
 import requests
 
-POKE_API_URL = 'https://pokeapi.co/api/v2/pokemon/charmander'
+POKE_API_URL = 'https://pokeapi.co/api/v2/pokemon/'
 
 def main():
     # Test out the get_pokemon_info() function
@@ -29,7 +29,7 @@ def get_pokemon_info(pokemon_name):
     }
     # Todo: Build a clean URL and use it to send a GET request
     print(f'Getting random pokeapi...', end='')
-    charmander = POKE_API_URL + pokemon_name
+    charmander = POKE_API_URL 
     resp_msg = requests.get(charmander, headers=headers)
     
 

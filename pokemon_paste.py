@@ -51,8 +51,8 @@ def get_paste_data(pokemon_info):
 
     # Todo: Build the paste body text
     body_text = ''
-    for pokemon in pokemon_info['results']:
-        body_text += pokemon ['pokemon'] + '\n\n'
+    for charmander in pokemon_info['name']:
+        body_text += f"-{charmander ['ability']['name']} \n\n"
     return (title, body_text[:-2])
 
 if __name__ == '__main__':
