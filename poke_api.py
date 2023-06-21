@@ -11,10 +11,7 @@ def main():
     poke_info = get_pokemon_info("charmander")
     print(poke_info, end ='\n\n')
     # Use breakpoints to view returned dictionary
-    
-    
-    
-    
+       
 
 def get_pokemon_info(pokemon_name):
     pokemon_name = str (pokemon_name).strip().lower()
@@ -32,8 +29,8 @@ def get_pokemon_info(pokemon_name):
     }
     # Todo: Build a clean URL and use it to send a GET request
     print(f'Getting random pokeapi...', end='')
-    url= POKE_API_URL + 'charmander'
-    resp_msg = requests.get(url, headers=headers)
+    charmander = POKE_API_URL + pokemon_name
+    resp_msg = requests.get(charmander, headers=headers)
     
 
     #Todo: If the GET request was successful, convert the JSON-formatted message body text to a dictionary and return it
