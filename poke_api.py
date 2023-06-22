@@ -29,7 +29,8 @@ def get_pokemon_info(pokemon_name):
     }
     # Todo: Build a clean URL and use it to send a GET request
     print(f'Getting random pokeapi...', end='')
-    charmander = POKE_API_URL 
+    charmander = POKE_API_URL + pokemon_name
+    print(f'\nPosting new paste to pasteBin')
     resp_msg = requests.get(charmander, headers=headers)
     
 
